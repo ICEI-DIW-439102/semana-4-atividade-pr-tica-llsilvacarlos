@@ -2,63 +2,229 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Currículo</title>
+    <title>YouTube</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Barra simulada do navegador -->
+    <div class="browser-bar">
+        <div class="browser-buttons">
+            <span class="btn-red"></span>
+            <span class="btn-yellow"></span>
+            <span class="btn-green"></span>
+        </div>
+        <div class="browser-nav">
+            <span class="nav-arrow">◀</span>
+            <span class="nav-arrow">▶</span>
+        </div>
+        <div class="browser-url">
+            <span>https://www.youtube.com/</span>
+        </div>
+    </div>
+
+    <!-- Header com logo, busca e ações -->
     <header class="header">
-        <img src="https://via.placeholder.com/120" alt="Foto de Perfil" class="profile-img">
-        <h1>Luiz Carlos</h1>
-        <p>Engenheiro de Software | Blockchain | React | Java</p>
+        <div class="header-left">
+            <img src="https://picsum.photos/id/1/80/30" alt="YouTube Logo" class="logo">
+        </div>
+        <div class="header-center">
+            <!-- Formulário de busca com 2 campos e 1 botão -->
+            <form class="search-form">
+                <input type="text" class="search-bar" name="query" placeholder="Search...">
+                <input type="hidden" name="source" value="web">
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
+        </div>
+        <div class="header-right">
+            <span class="header-icon">⬆</span>
+            <span class="header-icon">🔔</span>
+            <span class="header-icon">⚙</span>
+        </div>
     </header>
 
-    <section class="section">
-        <h2>Sobre</h2>
-        <p>
-            Profissional com experiência em desenvolvimento de sistemas, arquitetura de software e soluções com blockchain.
-        </p>
-    </section>
+    <!-- Abas de navegação -->
+    <nav class="nav-tabs">
+        <a href="#" class="tab active">Home</a>
+        <a href="#" class="tab">Trending</a>
+        <a href="#" class="tab">Subscription</a>
+    </nav>
 
-    <section class="section">
-        <h2>Experiência</h2>
+    <!-- Conteúdo principal: sidebar + main -->
+    <div class="content-wrapper">
 
-        <div class="card">
-            <h3>Senior Software Engineer</h3>
-            <p class="company">Empresa XYZ</p>
-            <span>2022 - Atual</span>
-            <p>Atuação com React, Java e arquitetura distribuída.</p>
-        </div>
+        <!-- Sidebar com menu e inscrições -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Channel</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Watch Later</a></li>
+            </ul>
+            <div class="sidebar-section">
+                <h3>Subscriptions</h3>
+                <div class="subscription-item">
+                    <img src="https://picsum.photos/id/64/30/30" alt="Canal 1" class="sub-avatar">
+                    <span>Nature Channel</span>
+                </div>
+                <div class="subscription-item">
+                    <img src="https://picsum.photos/id/65/30/30" alt="Canal 2" class="sub-avatar">
+                    <span>Music Vibes</span>
+                </div>
+                <div class="subscription-item">
+                    <img src="https://picsum.photos/id/60/30/30" alt="Canal 3" class="sub-avatar">
+                    <span>Tech Reviews</span>
+                </div>
+                <div class="subscription-item">
+                    <img src="https://picsum.photos/id/42/30/30" alt="Canal 4" class="sub-avatar">
+                    <span>Cooking Daily</span>
+                </div>
+            </div>
+        </aside>
 
-        <div class="card">
-            <h3>Software Developer</h3>
-            <p class="company">Empresa ABC</p>
-            <span>2020 - 2022</span>
-            <p>Desenvolvimento de APIs e integrações.</p>
-        </div>
+        <!-- Área de conteúdo principal -->
+        <main class="main-content">
 
-    </section>
+            <!-- Banner de anúncio -->
+            <section class="ad-banner">
+                <img src="https://picsum.photos/id/96/728/90" alt="Advertisement">
+                <span class="ad-label">Ad</span>
+            </section>
 
-    <section class="section">
-        <h2>Educação</h2>
+            <!-- Seção Recommended -->
+            <section class="video-section">
+                <h2>Recommended</h2>
+                <div class="video-grid">
 
-        <div class="card">
-            <h3>Engenharia de Software</h3>
-            <p class="company">Universidade X</p>
-            <span>2016 - 2020</span>
-        </div>
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/15/320/180" alt="Amazing Nature Documentary" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Amazing Nature Documentary</h4>
+                            <p class="video-channel">Nature Channel</p>
+                            <p class="video-meta">1.2M views • 3 days ago</p>
+                        </div>
+                    </article>
 
-    </section>
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/0/320/180" alt="Learn CSS Grid in 20 Minutes" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Learn CSS Grid in 20 Minutes</h4>
+                            <p class="video-channel">Code Academy</p>
+                            <p class="video-meta">850K views • 1 week ago</p>
+                        </div>
+                    </article>
 
-    <section class="section">
-        <h2>Habilidades</h2>
-        <ul class="skills">
-            <li>Java</li>
-            <li>React</li>
-            <li>Blockchain</li>
-            <li>Arquitetura de Software</li>
-        </ul>
-    </section>
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/28/320/180" alt="Top 10 Travel Destinations" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Top 10 Travel Destinations</h4>
+                            <p class="video-channel">Travel World</p>
+                            <p class="video-meta">2.1M views • 5 days ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/292/320/180" alt="Easy Pasta Recipe" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Easy Pasta Recipe</h4>
+                            <p class="video-channel">Cooking Daily</p>
+                            <p class="video-meta">500K views • 2 days ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/180/320/180" alt="JavaScript for Beginners" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">JavaScript for Beginners</h4>
+                            <p class="video-channel">Dev Tutorial</p>
+                            <p class="video-meta">1.5M views • 1 month ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/453/320/180" alt="Best Music Mix 2024" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Best Music Mix 2024</h4>
+                            <p class="video-channel">Music Vibes</p>
+                            <p class="video-meta">3.2M views • 4 days ago</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Seção Recently Uploaded -->
+            <section class="video-section">
+                <h2>Recently Uploaded</h2>
+                <div class="video-grid">
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/3/320/180" alt="How to Build a Website" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">How to Build a Website</h4>
+                            <p class="video-channel">Web Dev Pro</p>
+                            <p class="video-meta">320K views • 1 hour ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/106/320/180" alt="Morning Yoga Routine" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Morning Yoga Routine</h4>
+                            <p class="video-channel">Fitness Life</p>
+                            <p class="video-meta">180K views • 3 hours ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/2/320/180" alt="Python Crash Course" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Python Crash Course</h4>
+                            <p class="video-channel">Code Master</p>
+                            <p class="video-meta">450K views • 5 hours ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/312/320/180" alt="Street Food Around the World" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Street Food Around the World</h4>
+                            <p class="video-channel">Food Explorer</p>
+                            <p class="video-meta">290K views • 8 hours ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/145/320/180" alt="Guitar Lessons for Beginners" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Guitar Lessons for Beginners</h4>
+                            <p class="video-channel">Music School</p>
+                            <p class="video-meta">150K views • 12 hours ago</p>
+                        </div>
+                    </article>
+
+                    <article class="video-card">
+                        <img src="https://picsum.photos/id/110/320/180" alt="Space Documentary 2024" class="thumbnail">
+                        <div class="video-info">
+                            <h4 class="video-title">Space Documentary 2024</h4>
+                            <p class="video-channel">Science Hub</p>
+                            <p class="video-meta">520K views • 1 day ago</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2024 YouTube Clone - Trabalho Prático PUC Minas</p>
+    </footer>
 
 </body>
 </html>

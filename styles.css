@@ -1,56 +1,326 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico - box-model (margin e padding) */
+* {
     margin: 0;
-    background-color: #f3f2ef;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header {
-    background-color: #0a66c2;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+/* Estilos globais */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-width: 600px;
 }
 
-.profile-img {
+/* ===================== */
+/* Browser Bar           */
+/* ===================== */
+.browser-bar {
+    display: flex; /* display */
+    align-items: center;
+    background-color: #e8e8e8;
+    padding: 8px 12px; /* padding */
+}
+
+.browser-buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 12px; /* margin */
+}
+
+/* Seletor combinado: span dentro de .browser-buttons */
+.browser-buttons span {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    width: 120px;
-    border: 4px solid white;
+    display: inline-block;
 }
 
-.section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.btn-red { background-color: #ff5f56; }
+.btn-yellow { background-color: #ffbd2e; }
+.btn-green { background-color: #27c93f; }
+
+.browser-nav {
+    display: flex;
+    gap: 8px;
+    margin-right: 12px;
 }
 
-h2 {
-    border-bottom: 2px solid #0a66c2;
-    padding-bottom: 5px;
+.nav-arrow {
+    font-size: 12px;
+    color: #666;
+    cursor: default;
 }
 
-.card {
-    margin-top: 15px;
+.browser-url {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #333;
 }
 
-.company {
+/* ===================== */
+/* Header                */
+/* ===================== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 8px 16px;
+}
+
+/* Seletor combinado: .logo dentro de .header-left */
+.header-left .logo {
+    display: block;
+}
+
+.header-center {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 16px;
+}
+
+/* Formulário de busca */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 6px 12px;
+    border: 1px solid #555;
+    border-radius: 2px 0 0 2px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+}
+
+.search-btn {
+    padding: 6px 12px;
+    border: 1px solid #555;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    gap: 16px;
+}
+
+.header-icon {
+    color: #fff;
+    font-size: 18px;
+    cursor: default;
+}
+
+/* ===================== */
+/* Navigation Tabs       */
+/* ===================== */
+.nav-tabs {
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 16px;
+    padding-left: 216px;
+}
+
+/* Seletor combinado: .tab dentro de .nav-tabs */
+.nav-tabs .tab {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+}
+
+/* Seletor combinado: .tab.active dentro de .nav-tabs */
+.nav-tabs .tab.active {
+    color: #333;
     font-weight: bold;
-    color: #555;
+    border-bottom: 3px solid #ff0000;
 }
 
-.skills {
+/* ===================== */
+/* Layout Principal      */
+/* ===================== */
+.content-wrapper {
+    display: flex;
+    min-height: calc(100vh - 160px);
+}
+
+/* ===================== */
+/* Sidebar               */
+/* ===================== */
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    padding: 16px 0; /* padding */
+}
+
+.sidebar-menu {
     list-style: none;
     padding: 0;
+    margin: 0 0 16px 0; /* margin */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
 }
 
-.skills li {
-    display: inline-block;
-    background: #0a66c2;
-    color: white;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 20px;
+/* Seletor combinado: a dentro de li dentro de .sidebar-menu */
+.sidebar-menu li a {
+    display: block; /* display */
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
     font-size: 14px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #e0e0e0;
+}
+
+.sidebar-section {
+    padding: 0 16px;
+}
+
+/* Seletor combinado: h3 dentro de .sidebar-section */
+.sidebar-section h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.subscription-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+}
+
+.sub-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Seletor combinado: span dentro de .subscription-item */
+.subscription-item span {
+    font-size: 13px;
+    color: #333;
+}
+
+/* ===================== */
+/* Main Content          */
+/* ===================== */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px; /* padding */
+}
+
+/* ===================== */
+/* Ad Banner - position  */
+/* ===================== */
+.ad-banner {
+    position: relative; /* position */
+    margin-bottom: 24px; /* margin */
+}
+
+/* Seletor combinado: img dentro de .ad-banner */
+.ad-banner img {
+    width: 100%;
+    display: block;
+}
+
+.ad-label {
+    position: absolute; /* position */
+    top: 4px;
+    right: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+/* ===================== */
+/* Video Section         */
+/* ===================== */
+.video-section {
+    margin-bottom: 24px;
+}
+
+/* Seletor combinado: h2 dentro de .video-section */
+.video-section h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Video Grid - display: grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ===================== */
+/* Video Card (article)  */
+/* ===================== */
+.video-card {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Seletor combinado: .thumbnail dentro de .video-card */
+.video-card .thumbnail {
+    width: 100%;
+    display: block;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.video-channel {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.video-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===================== */
+/* Footer                */
+/* ===================== */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 0;
+    font-size: 13px;
 }
